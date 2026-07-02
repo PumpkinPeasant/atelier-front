@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', Arial, sans-serif;
+
+  --font-weight-heading: 500;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --color-cream-50: #f5f2ed;
+  --color-cream-100: #e6e1dc;
+  --color-cream-200: #e4dcd6;
+  --color-stone-100: #dad2ca;
+  --color-stone-200: #d5cbc4;
+  --color-stone-300: #cbc2b8;
+  --color-stone-400: #c6b7a9;
+  --color-stone-500: #aba298;
+  --color-taupe-500: #948778;
+  --color-taupe-600: #887868;
+  --color-olive-700: #3e4740;
+  --color-olive-800: #3d453e;
+  --color-charcoal: #1d1b17;
+  --color-brown-700: #5b4935;
+  --color-brown-800: #493520;
+
+  --color-background: var(--color-cream-50);
+  --color-surface: #ffffff;
+  --color-surface-muted: var(--color-cream-100);
+  --color-text: var(--color-charcoal);
+  --color-text-muted: #645f56;
+  --color-border: var(--color-stone-200);
+  --color-primary: var(--color-olive-700);
+  --color-primary-hover: var(--color-olive-800);
+  --color-primary-contrast: var(--color-cream-50);
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+}
