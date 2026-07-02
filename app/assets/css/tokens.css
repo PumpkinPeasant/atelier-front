@@ -35,10 +35,21 @@
   --color-primary: var(--color-olive-700);
   --color-primary-hover: var(--color-olive-800);
   --color-primary-contrast: var(--color-cream-50);
+
+  --container-inline: clamp(20px, 5.8vw, 74px);
+  --section-gap: clamp(56px, 8vw, 104px);
+  --line-thin: 1px solid var(--color-border);
 }
 
 html {
   font-family: var(--font-body);
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -49,6 +60,18 @@ body {
   background: var(--color-background);
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -57,4 +80,15 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-heading);
+  margin: 0;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding-inline: var(--container-inline);
 }
