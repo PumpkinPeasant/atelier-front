@@ -1,12 +1,12 @@
 <template>
   <footer class="site-footer container">
-    <p>© Nora Hale Atelier<br>All rights reserved</p>
-    <nav aria-label="Footer navigation">
-      <a href="#">Shipping & returns</a>
-      <a href="#">Terms & conditions</a>
-      <a href="#">Privacy policy</a>
+    <p>© Nora Hale Atelier<br>Все права защищены</p>
+    <nav aria-label="Навигация в подвале">
+      <a href="#">Доставка и возврат</a>
+      <a href="#">Условия</a>
+      <a href="#">Политика конфиденциальности</a>
     </nav>
-    <nav aria-label="Social links">
+    <nav aria-label="Социальные сети">
       <a href="#">Instagram</a>
       <a href="#">Pinterest</a>
     </nav>

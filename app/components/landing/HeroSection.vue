@@ -13,8 +13,8 @@
       />
     </div>
     <div class="hero__content">
-      <h1 id="hero-title">Thoughtfully made essentials for everyday life.</h1>
-      <a class="hero__button" href="#">Shop collection</a>
+      <h1 id="hero-title">Продуманные базовые вещи на каждый день.</h1>
+      <a class="hero__button" href="#">Смотреть коллекцию</a>
     </div>
   </section>
 </template>
@@ -22,7 +22,7 @@
 <script setup lang="ts">
 const heroImage = {
   src: '/images/hero-shirt.png',
-  alt: 'Cream cotton shirt with Nora Hale label'
+  alt: 'Кремовая хлопковая футболка с биркой Nora Hale'
 }
 </script>
 

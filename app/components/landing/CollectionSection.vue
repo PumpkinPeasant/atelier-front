@@ -1,10 +1,10 @@
 <template>
   <section class="collection container" aria-labelledby="collection-title">
     <div class="collection__lead">
-      <p class="eyebrow">Core collection</p>
-      <h2 id="collection-title">Permanent essentials.</h2>
+      <p class="eyebrow">Основная коллекция</p>
+      <h2 id="collection-title">Базовые вещи вне сезона.</h2>
       <a href="#">
-        View all patterns
+        Все модели
         <Icon name="lucide:arrow-right" aria-hidden="true" />
       </a>
     </div>
@@ -29,10 +29,10 @@
 
 <script setup lang="ts">
 const products = [
-  { pattern: 'Pattern 01', name: 'Classic Tee', colors: '6 colors', image: { src: '', alt: 'Classic tee' } },
-  { pattern: 'Pattern 04', name: 'Heavy Sweatshirt', colors: '5 colors', image: { src: '', alt: 'Heavy sweatshirt' } },
-  { pattern: 'Pattern 06', name: 'Relaxed Shorts', colors: '4 colors', image: { src: '', alt: 'Relaxed shorts' } },
-  { pattern: 'Pattern 08', name: 'Wide Pants', colors: '3 colors', image: { src: '', alt: 'Wide pants' } }
+  { pattern: 'Модель 01', name: 'Classic Tee', colors: '6 цветов', image: { src: '', alt: 'Classic Tee' } },
+  { pattern: 'Модель 04', name: 'Heavy Sweatshirt', colors: '5 цветов', image: { src: '', alt: 'Heavy Sweatshirt' } },
+  { pattern: 'Модель 06', name: 'Relaxed Shorts', colors: '4 цвета', image: { src: '', alt: 'Relaxed Shorts' } },
+  { pattern: 'Модель 08', name: 'Wide Pants', colors: '3 цвета', image: { src: '', alt: 'Wide Pants' } }
 ]
 </script>
 

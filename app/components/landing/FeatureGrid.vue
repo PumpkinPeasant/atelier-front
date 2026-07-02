@@ -1,5 +1,5 @@
 <template>
-  <section class="features container" aria-label="Brand values">
+  <section class="features container" aria-label="Принципы бренда">
     <article v-for="feature in features" :key="feature.title" class="feature">
       <p class="feature__eyebrow">{{ feature.kicker }}</p>
       <h2>{{ feature.title }}</h2>
@@ -15,22 +15,22 @@
 <script setup lang="ts">
 const features = [
   {
-    kicker: 'Fit & quality',
-    title: 'Every detail has a purpose.',
-    copy: 'We refine each pattern until the fit feels right and the garment lasts.',
-    link: 'Read more'
+    kicker: 'Посадка и качество',
+    title: 'У каждой детали есть задача.',
+    copy: 'Мы дорабатываем каждую модель, пока посадка не станет точной, а вещь надежной.',
+    link: 'Подробнее'
   },
   {
-    kicker: 'Materials',
-    title: 'Carefully chosen natural materials.',
-    copy: 'We work with fabrics that feel good, wear well and age beautifully.',
-    link: 'Our materials'
+    kicker: 'Материалы',
+    title: 'Натуральные материалы с внимательным отбором.',
+    copy: 'Мы выбираем ткани, которые приятны к телу, хорошо носятся и красиво стареют.',
+    link: 'О материалах'
   },
   {
-    kicker: 'Studio notes',
-    title: 'Thoughts from the workbench.',
-    copy: 'Notes on design, fabric, fit and the process behind our pieces.',
-    link: 'Visit journal'
+    kicker: 'Заметки студии',
+    title: 'Мысли с рабочего стола.',
+    copy: 'Заметки о дизайне, тканях, посадке и процессе создания наших вещей.',
+    link: 'В журнал'
   }
 ]
 </script>

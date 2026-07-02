@@ -1,20 +1,20 @@
 <template>
   <header class="site-header">
-    <nav class="site-header__nav site-header__nav--left" aria-label="Primary navigation">
-      <a href="#">Shop</a>
-      <a href="#">Studio</a>
-      <a href="#">Journal</a>
+    <nav class="site-header__nav site-header__nav--left" aria-label="Основная навигация">
+      <a href="#">Магазин</a>
+      <a href="#">Студия</a>
+      <a href="#">Журнал</a>
     </nav>
 
-    <a class="site-header__brand" href="#" aria-label="Nora Hale Atelier home">
+    <a class="site-header__brand" href="#" aria-label="Nora Hale Atelier, главная">
       <span>Nora Hale</span>
       <small>atelier</small>
     </a>
 
-    <nav class="site-header__nav site-header__nav--right" aria-label="Account navigation">
-      <a href="#">About</a>
-      <a href="#">Account</a>
-      <a href="#">Cart (0)</a>
+    <nav class="site-header__nav site-header__nav--right" aria-label="Навигация аккаунта">
+      <a href="#">О нас</a>
+      <a href="#">Аккаунт</a>
+      <a href="#">Корзина (0)</a>
     </nav>
   </header>
 </template>

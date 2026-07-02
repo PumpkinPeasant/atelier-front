@@ -1,11 +1,11 @@
 <template>
   <section class="studio container" aria-labelledby="studio-title">
     <div class="studio__content">
-      <p class="studio__eyebrow">The studio</p>
-      <h2 id="studio-title">A place for good ideas and better basics.</h2>
-      <p>Nora Hale Atelier is a small independent studio based on the belief that simplicity done well makes a difference.</p>
+      <p class="studio__eyebrow">Студия</p>
+      <h2 id="studio-title">Место для хороших идей и лучшей базы.</h2>
+      <p>Nora Hale Atelier — небольшая независимая студия, построенная на вере в то, что простота, сделанная хорошо, меняет ощущение вещи.</p>
       <a href="#">
-        About the studio
+        О студии
         <Icon name="lucide:arrow-right" aria-hidden="true" />
       </a>
     </div>
@@ -28,9 +28,9 @@
 
 <script setup lang="ts">
 const studioImages = [
-  { src: '', alt: 'Dress form in the atelier', tone: 'soft' as const },
-  { src: '', alt: 'Fabric swatches and sketches', tone: 'warm' as const },
-  { src: '', alt: 'Designer working in the studio', tone: 'dark' as const }
+  { src: '', alt: 'Манекен в ателье', tone: 'soft' as const },
+  { src: '', alt: 'Образцы тканей и эскизы', tone: 'warm' as const },
+  { src: '', alt: 'Дизайнер за работой в студии', tone: 'dark' as const }
 ]
 </script>
 

@@ -1,8 +1,8 @@
 <template>
-  <section class="intro container" aria-label="Studio summary">
-    <p>A small clothing studio focused on quality, fit and longevity.</p>
-    <p class="intro__center">EST<br>2021</p>
-    <p class="intro__right">Designed in our studio.<br>Made in limited quantities.</p>
+  <section class="intro container" aria-label="Кратко о студии">
+    <p>Небольшая студия одежды с фокусом на качество, посадку и долговечность.</p>
+    <p class="intro__center">Основана<br>2021</p>
+    <p class="intro__right">Разработано в нашей студии.<br>Выпускается малыми партиями.</p>
   </section>
 </template>
 
