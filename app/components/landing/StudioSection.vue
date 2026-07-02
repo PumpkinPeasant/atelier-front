@@ -4,10 +4,10 @@
       <p class="studio__eyebrow">Студия</p>
       <h2 id="studio-title">Место для хороших идей и лучшей базы.</h2>
       <p>Nora Hale Atelier — небольшая независимая студия, построенная на вере в то, что простота, сделанная хорошо, меняет ощущение вещи.</p>
-      <a href="#">
+      <NuxtLink to="/studio">
         О студии
         <Icon name="lucide:arrow-right" aria-hidden="true" />
-      </a>
+      </NuxtLink>
     </div>
 
     <div class="studio__gallery" aria-hidden="true">
@@ -17,8 +17,8 @@
         class="studio__image"
         :src="image.src"
         :alt="image.alt"
-        :width="720"
-        :height="820"
+        :width="1254"
+        :height="1254"
         sizes="xs:100vw md:33vw"
         :tone="image.tone"
       />
@@ -28,9 +28,9 @@
 
 <script setup lang="ts">
 const studioImages = [
-  { src: '', alt: 'Манекен в ателье', tone: 'soft' as const },
-  { src: '', alt: 'Образцы тканей и эскизы', tone: 'warm' as const },
-  { src: '', alt: 'Дизайнер за работой в студии', tone: 'dark' as const }
+  { src: '/images/landing/studio-mannequin.png', alt: 'Манекен в ателье с сантиметровой лентой', tone: 'soft' as const },
+  { src: '/images/landing/fabric-swatches.png', alt: 'Образцы тканей в натуральных оттенках', tone: 'warm' as const },
+  { src: '/images/landing/tee-details.png', alt: 'Детали базовых футболок в нейтральных цветах', tone: 'dark' as const }
 ]
 </script>
 
@@ -88,7 +88,7 @@ const studioImages = [
 }
 
 .studio__image {
-  min-height: clamp(250px, 28vw, 334px);
+  aspect-ratio: 1 / 1;
 }
 
 @media (max-width: 880px) {

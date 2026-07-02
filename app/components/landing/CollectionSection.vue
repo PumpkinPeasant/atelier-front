@@ -29,10 +29,30 @@
 
 <script setup lang="ts">
 const products = [
-  { pattern: 'Модель 01', name: 'Classic Tee', colors: '6 цветов', image: { src: '', alt: 'Classic Tee' } },
-  { pattern: 'Модель 04', name: 'Heavy Sweatshirt', colors: '5 цветов', image: { src: '', alt: 'Heavy Sweatshirt' } },
-  { pattern: 'Модель 06', name: 'Relaxed Shorts', colors: '4 цвета', image: { src: '', alt: 'Relaxed Shorts' } },
-  { pattern: 'Модель 08', name: 'Wide Pants', colors: '3 цвета', image: { src: '', alt: 'Wide Pants' } }
+  {
+    pattern: 'Модель 01',
+    name: 'Classic Tee',
+    colors: '6 цветов',
+    image: { src: '/images/examples/classic-tee.png', alt: 'Classic Tee' }
+  },
+  {
+    pattern: 'Модель 04',
+    name: 'Heavy Sweatshirt',
+    colors: '5 цветов',
+    image: { src: '/images/examples/heavy-sweatshirt.png', alt: 'Heavy Sweatshirt' }
+  },
+  {
+    pattern: 'Модель 06',
+    name: 'Relaxed Shorts',
+    colors: '4 цвета',
+    image: { src: '/images/examples/relaxed-shorts.png', alt: 'Relaxed Shorts' }
+  },
+  {
+    pattern: 'Модель 08',
+    name: 'Wide Pants',
+    colors: '3 цвета',
+    image: { src: '/images/examples/wide-pants.png', alt: 'Wide Pants' }
+  }
 ]
 </script>
 
@@ -90,7 +110,7 @@ const products = [
 
 .product-card__image {
   width: 100%;
-  aspect-ratio: 0.88;
+  aspect-ratio: 1023 / 1537;
   height: auto;
   margin-bottom: 22px;
 }

@@ -7,8 +7,9 @@
       <a href="#">Политика конфиденциальности</a>
     </nav>
     <nav aria-label="Социальные сети">
-      <a href="#">Instagram</a>
-      <a href="#">Pinterest</a>
+      <a href="#">Авито</a>
+      <a href="#">Telegram</a>
+      <a href="#">VK</a>
     </nav>
   </footer>
 </template>

@@ -17,7 +17,7 @@
     </div>
     <div class="hero__content">
       <h1 id="hero-title">Базовые вещи ручной работы на каждый день.</h1>
-      <a class="hero__button" href="#">Смотреть коллекцию</a>
+      <NuxtLink class="hero__button" to="/catalog">Смотреть коллекцию</NuxtLink>
     </div>
   </section>
 </template>

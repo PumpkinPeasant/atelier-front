@@ -32,9 +32,15 @@
         <p>Ничего не производится массово. Модель может выйти тиражом в несколько штук или быть сшита на заказ как единичное изделие.</p>
         <p>Так остаётся меньше лишнего, больше внимания к деталям и больше контроля над посадкой, обработкой и финальным ощущением вещи.</p>
       </div>
-      <div class="studio-placeholder studio-placeholder--portrait">
-        <span>production — sewing at the machine</span>
-      </div>
+      <NuxtImg
+        class="studio-split__image"
+        src="/images/about/small-batches.png"
+        alt="Ряд базовых вещей на вешалке в студии"
+        width="1024"
+        height="1536"
+        loading="lazy"
+        provider="none"
+      />
     </section>
 
     <section class="studio-process studio-container" aria-labelledby="studio-process-title">
@@ -99,13 +105,13 @@ const productionShots = [
     caption: 'подготовка ткани'
   },
   {
-    src: '/images/about/process-machine.png',
+    src: '/images/about/process-sewing.png',
     alt: 'Пошив изделия на швейной машине',
     caption: 'работа за машиной'
   },
   {
-    src: '/images/about/process-pressing.png',
-    alt: 'Финальная обработка и утюжка швов',
+    src: '/images/about/process-mannequin.png',
+    alt: 'Готовая футболка на манекене в студии',
     caption: 'финальная обработка'
   }
 ]
@@ -271,6 +277,13 @@ useSeoMeta(createSeoMeta({
 .studio-split__copy p:not(.studio-kicker) {
   max-width: 540px;
   margin-top: 22px;
+}
+
+.studio-split__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--color-stone-200);
 }
 
 .studio-process {
