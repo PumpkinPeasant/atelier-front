@@ -1,16 +1,19 @@
 <template>
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__media" aria-hidden="true">
-      <NuxtImg
-        class="hero__image"
-        :src="heroImage.src"
-        :alt="heroImage.alt"
-        :width="1536"
-        :height="1024"
-        loading="eager"
-        preload
-        provider="none"
-      />
+      <picture>
+        <source :srcset="heroImage.mobileSrc" media="(max-width: 760px)">
+        <NuxtImg
+          class="hero__image"
+          :src="heroImage.src"
+          :alt="heroImage.alt"
+          :width="1536"
+          :height="1024"
+          loading="eager"
+          preload
+          provider="none"
+        />
+      </picture>
     </div>
     <div class="hero__content">
       <h1 id="hero-title">Продуманные базовые вещи на каждый день.</h1>
@@ -22,6 +25,7 @@
 <script setup lang="ts">
 const heroImage = {
   src: '/images/hero-shirt.png',
+  mobileSrc: '/images/hero-shirt-mobile.png',
   alt: 'Кремовая хлопковая футболка с биркой Nora Hale'
 }
 </script>
@@ -38,6 +42,12 @@ const heroImage = {
   position: absolute;
   inset: 0;
   background: var(--color-cream-100);
+}
+
+.hero__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero__media::after {
@@ -96,6 +106,10 @@ const heroImage = {
 @media (max-width: 760px) {
   .hero {
     min-height: 620px;
+  }
+
+  .hero__media::after {
+    background: linear-gradient(180deg, rgba(245, 242, 237, 0.2) 0%, rgba(245, 242, 237, 0) 42%);
   }
 
   .hero__content {
