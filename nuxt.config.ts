@@ -33,5 +33,8 @@ export default defineNuxtConfig({
   icon: {
     mode: 'svg'
   },
-  css: ['~/assets/css/tokens.css']
+  css: ['~/assets/css/tokens.css'],
+  nitro: {
+    preset: 'netlify'
+  }
 })
