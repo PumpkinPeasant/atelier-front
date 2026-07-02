@@ -11,16 +11,20 @@
 
     <div class="collection__grid">
       <article v-for="item in products" :key="item.name" class="product-card">
-        <UiOptimizedImage
-          class="product-card__image"
-          :src="item.image.src"
-          :alt="item.image.alt"
-          :width="640"
-          :height="728"
-          sizes="xs:100vw sm:50vw lg:25vw"
-        />
+        <NuxtLink :to="item.to" :aria-label="`Открыть ${item.name}`">
+          <UiOptimizedImage
+            class="product-card__image"
+            :src="item.image.src"
+            :alt="item.image.alt"
+            :width="640"
+            :height="728"
+            sizes="xs:100vw sm:50vw lg:25vw"
+          />
+        </NuxtLink>
         <p class="product-card__pattern">{{ item.pattern }}</p>
-        <h3>{{ item.name }}</h3>
+        <h3>
+          <NuxtLink :to="item.to">{{ item.name }}</NuxtLink>
+        </h3>
         <p class="product-card__colors">{{ item.colors }}</p>
       </article>
     </div>
@@ -33,25 +37,29 @@ const products = [
     pattern: 'Модель 01',
     name: 'Classic Tee',
     colors: '6 цветов',
-    image: { src: '/images/examples/classic-tee.png', alt: 'Classic Tee' }
+    image: { src: '/images/examples/classic-tee.png', alt: 'Classic Tee' },
+    to: '/catalog'
   },
   {
     pattern: 'Модель 04',
     name: 'Heavy Sweatshirt',
     colors: '5 цветов',
-    image: { src: '/images/examples/heavy-sweatshirt.png', alt: 'Heavy Sweatshirt' }
+    image: { src: '/images/examples/heavy-sweatshirt.png', alt: 'Heavy Sweatshirt' },
+    to: '/catalog/heavy-sweatshirt'
   },
   {
     pattern: 'Модель 06',
     name: 'Relaxed Shorts',
     colors: '4 цвета',
-    image: { src: '/images/examples/relaxed-shorts.png', alt: 'Relaxed Shorts' }
+    image: { src: '/images/examples/relaxed-shorts.png', alt: 'Relaxed Shorts' },
+    to: '/catalog'
   },
   {
     pattern: 'Модель 08',
     name: 'Wide Pants',
     colors: '3 цвета',
-    image: { src: '/images/examples/wide-pants.png', alt: 'Wide Pants' }
+    image: { src: '/images/examples/wide-pants.png', alt: 'Wide Pants' },
+    to: '/catalog'
   }
 ]
 </script>
