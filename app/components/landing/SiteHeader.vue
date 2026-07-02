@@ -1,15 +1,15 @@
 <template>
   <header class="site-header">
     <nav class="site-header__nav site-header__nav--left" aria-label="Основная навигация">
-      <a href="#">Магазин</a>
+      <NuxtLink to="/catalog">Магазин</NuxtLink>
       <a href="#">Студия</a>
       <a href="#">Журнал</a>
     </nav>
 
-    <a class="site-header__brand" href="#" aria-label="Nora Hale Atelier, главная">
+    <NuxtLink class="site-header__brand" to="/" aria-label="Nora Hale Atelier, главная">
       <span>Nora Hale</span>
       <small>atelier</small>
-    </a>
+    </NuxtLink>
 
     <nav class="site-header__nav site-header__nav--right" aria-label="Навигация аккаунта">
       <a href="#">О нас</a>

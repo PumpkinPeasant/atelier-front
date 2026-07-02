@@ -16,7 +16,7 @@
       </picture>
     </div>
     <div class="hero__content">
-      <h1 id="hero-title">Продуманные базовые вещи на каждый день.</h1>
+      <h1 id="hero-title">Базовые вещи ручной работы на каждый день.</h1>
       <a class="hero__button" href="#">Смотреть коллекцию</a>
     </div>
   </section>

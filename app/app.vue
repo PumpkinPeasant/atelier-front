@@ -1,17 +1,19 @@
 <template>
   <div class="site-shell">
     <NuxtRouteAnnouncer />
-    <LandingSiteHeader />
-    <main>
-      <LandingHeroSection />
-      <LandingIntroBar />
-      <LandingCollectionSection />
-      <LandingFeatureGrid />
-      <LandingStudioSection />
-    </main>
-    <LandingSiteFooter />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
+
+<script setup lang="ts">
+useHead({
+  htmlAttrs: {
+    lang: 'ru'
+  }
+})
+</script>
 
 <style scoped>
 .site-shell {
