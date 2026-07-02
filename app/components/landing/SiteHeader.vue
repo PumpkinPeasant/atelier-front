@@ -1,9 +1,8 @@
 <template>
-  <header class="site-header">
+  <header class="site-header" :class="{ 'site-header--scrolled': isScrolled }">
     <nav class="site-header__nav site-header__nav--left" aria-label="Основная навигация">
-      <NuxtLink to="/catalog">Магазин</NuxtLink>
-      <a href="#">Студия</a>
-      <a href="#">Журнал</a>
+      <NuxtLink to="/catalog">Коллекция</NuxtLink>
+      <NuxtLink to="/studio">О студии</NuxtLink>
     </nav>
 
     <NuxtLink class="site-header__brand" to="/" aria-label="Nora Hale Atelier, главная">
@@ -12,25 +11,55 @@
     </NuxtLink>
 
     <nav class="site-header__nav site-header__nav--right" aria-label="Навигация аккаунта">
-      <a href="#">О нас</a>
-      <a href="#">Аккаунт</a>
-      <a href="#">Корзина (0)</a>
+      <a href="#">Доставка и возврат</a>
+      <a href="#">Контакты</a>
     </nav>
   </header>
 </template>
 
+<script setup lang="ts">
+const isScrolled = ref(false)
+
+const updateScrolledState = () => {
+  isScrolled.value = window.scrollY > 8
+}
+
+onMounted(() => {
+  updateScrolledState()
+  window.addEventListener('scroll', updateScrolledState, { passive: true })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', updateScrolledState)
+})
+</script>
+
 <style scoped>
 .site-header {
-  position: absolute;
-  z-index: 10;
+  position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: start;
+  align-items: center;
   width: 100%;
-  padding: 48px var(--container-inline) 0;
+  min-height: 86px;
+  padding: 18px var(--container-inline);
   color: var(--color-text);
+  background: rgba(245, 242, 237, 0);
+  backdrop-filter: blur(0);
+  border-bottom: 1px solid rgba(213, 203, 196, 0);
+  transition:
+    background 220ms ease,
+    backdrop-filter 220ms ease,
+    border-color 220ms ease;
+}
+
+.site-header--scrolled {
+  background: rgba(245, 242, 237, 0.72);
+  backdrop-filter: blur(18px);
+  border-bottom-color: rgba(213, 203, 196, 0.45);
 }
 
 .site-header__nav {
@@ -74,8 +103,10 @@
   .site-header {
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 22px;
-    padding-top: 24px;
+    gap: 16px;
+    min-height: 112px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .site-header__brand {
