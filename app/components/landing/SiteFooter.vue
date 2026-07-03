@@ -22,8 +22,10 @@
   align-items: end;
   padding-top: 34px;
   padding-bottom: 34px;
+  color: #5a574e;
   font-size: 11px;
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0.1em;
   line-height: 1.6;
   text-transform: uppercase;
 }

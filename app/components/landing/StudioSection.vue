@@ -53,21 +53,25 @@ const studioImages = [
 
 .studio__eyebrow {
   margin-bottom: 8px;
+  color: var(--color-text-muted);
   font-size: 11px;
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .studio h2 {
-  font-size: clamp(32px, 3.2vw, 42px);
-  line-height: 1.02;
+  color: #22211c;
+  font-size: clamp(31px, 2.6vw, 34px);
+  line-height: 1.12;
 }
 
 .studio p:not(.studio__eyebrow) {
   max-width: 218px;
+  color: #4e4c44;
   font-size: 13px;
-  line-height: 1.45;
+  line-height: 1.7;
 }
 
 .studio a {

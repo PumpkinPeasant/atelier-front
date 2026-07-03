@@ -10,19 +10,19 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --color-cream-50: #f5f2ed;
-  --color-cream-100: #e6e1dc;
-  --color-cream-200: #e4dcd6;
+  --color-cream-50: #f4f0e8;
+  --color-cream-100: #efebdf;
+  --color-cream-200: #e3dbca;
   --color-stone-100: #dad2ca;
-  --color-stone-200: #d5cbc4;
+  --color-stone-200: #d6d0c3;
   --color-stone-300: #cbc2b8;
   --color-stone-400: #c6b7a9;
   --color-stone-500: #aba298;
   --color-taupe-500: #948778;
   --color-taupe-600: #887868;
-  --color-olive-700: #3e4740;
-  --color-olive-800: #3d453e;
-  --color-charcoal: #1d1b17;
+  --color-olive-700: #3c4a3e;
+  --color-olive-800: #2e3a30;
+  --color-charcoal: #23221d;
   --color-brown-700: #5b4935;
   --color-brown-800: #493520;
 
@@ -30,13 +30,14 @@
   --color-surface: #ffffff;
   --color-surface-muted: var(--color-cream-100);
   --color-text: var(--color-charcoal);
-  --color-text-muted: #645f56;
+  --color-text-muted: #77746b;
   --color-border: var(--color-stone-200);
   --color-primary: var(--color-olive-700);
   --color-primary-hover: var(--color-olive-800);
   --color-primary-contrast: var(--color-cream-50);
 
   --container-inline: clamp(20px, 5.8vw, 74px);
+  --container-max: 1786px;
   --section-gap: clamp(56px, 8vw, 104px);
   --line-thin: 1px solid var(--color-border);
 }
@@ -88,7 +89,14 @@ p {
   margin: 0;
 }
 
+::selection {
+  color: var(--color-primary-contrast);
+  background: var(--color-primary);
+}
+
 .container {
   width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
   padding-inline: var(--container-inline);
 }

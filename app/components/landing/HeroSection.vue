@@ -35,13 +35,13 @@ const heroImage = {
   position: relative;
   min-height: clamp(620px, 66vw, 760px);
   overflow: hidden;
-  background: var(--color-cream-100);
+  background: var(--color-cream-200);
 }
 
 .hero__media {
   position: absolute;
   inset: 0;
-  background: var(--color-cream-100);
+  background: var(--color-cream-200);
 }
 
 .hero__media picture {
@@ -54,7 +54,7 @@ const heroImage = {
   position: absolute;
   inset: 0;
   content: '';
-  background: linear-gradient(90deg, rgba(245, 242, 237, 0.34) 0%, rgba(245, 242, 237, 0) 58%);
+  background: linear-gradient(90deg, rgba(244, 240, 232, 0.32) 0%, rgba(244, 240, 232, 0) 58%);
   pointer-events: none;
 }
 
@@ -72,14 +72,18 @@ const heroImage = {
   display: grid;
   align-content: center;
   justify-items: start;
+  width: 100%;
+  max-width: var(--container-max);
   min-height: inherit;
+  margin-inline: auto;
   padding: 136px var(--container-inline) 64px;
 }
 
 .hero h1 {
-  max-width: 650px;
-  font-size: clamp(58px, 6.4vw, 92px);
-  line-height: 0.98;
+  max-width: 560px;
+  color: #22211c;
+  font-size: clamp(58px, 6vw, 78px);
+  line-height: 1.03;
 }
 
 .hero__button {
@@ -109,7 +113,7 @@ const heroImage = {
   }
 
   .hero__media::after {
-    background: linear-gradient(180deg, rgba(245, 242, 237, 0.2) 0%, rgba(245, 242, 237, 0) 42%);
+    background: linear-gradient(90deg, rgba(244, 240, 232, 0.36) 0%, rgba(244, 240, 232, 0) 68%);
   }
 
   .hero__content {

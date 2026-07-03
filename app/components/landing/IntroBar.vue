@@ -15,8 +15,9 @@
   padding-top: 40px;
   padding-bottom: 32px;
   border-bottom: var(--line-thin);
+  color: #37352e;
   font-size: 13px;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 .intro__center {

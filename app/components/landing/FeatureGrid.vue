@@ -62,23 +62,27 @@ const features = [
 
 .feature__eyebrow {
   margin-bottom: 26px;
+  color: var(--color-text-muted);
   font-size: 11px;
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0.14em;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .feature h2 {
   max-width: 250px;
-  font-size: clamp(28px, 2.45vw, 36px);
-  line-height: 1.06;
+  color: #22211c;
+  font-size: clamp(28px, 2.25vw, 30px);
+  line-height: 1.1;
 }
 
 .feature__copy {
   max-width: 240px;
   margin-top: 18px;
+  color: #4e4c44;
   font-size: 13px;
-  line-height: 1.45;
+  line-height: 1.7;
 }
 
 .feature a {

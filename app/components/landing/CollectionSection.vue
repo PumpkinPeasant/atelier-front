@@ -83,16 +83,19 @@ const products = [
 .eyebrow,
 .product-card__pattern,
 .product-card__colors {
+  color: var(--color-text-muted);
   font-size: 11px;
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0.12em;
   line-height: 1;
   text-transform: uppercase;
 }
 
 .collection h2 {
   max-width: 190px;
-  font-size: clamp(30px, 3vw, 40px);
-  line-height: 1.05;
+  color: #22211c;
+  font-size: clamp(30px, 2.6vw, 34px);
+  line-height: 1.08;
 }
 
 .collection__lead a {
@@ -124,11 +127,12 @@ const products = [
 }
 
 .product-card h3 {
-  margin-top: 10px;
-  font-family: var(--font-body);
-  font-size: 18px;
-  font-weight: var(--font-weight-regular);
-  line-height: 1.2;
+  margin-top: 9px;
+  color: #22211c;
+  font-family: var(--font-heading);
+  font-size: 23px;
+  font-weight: var(--font-weight-heading);
+  line-height: 1.1;
 }
 
 .product-card__colors {
