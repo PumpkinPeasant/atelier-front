@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 const heroImage = {
-  src: '/images/hero-shirt.png',
+  src: '/images/hero-shirt-wide.png',
   mobileSrc: '/images/hero-shirt-mobile.png',
   alt: 'Кремовая хлопковая футболка с биркой Nora Hale'
 }
