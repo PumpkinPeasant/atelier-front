@@ -105,7 +105,7 @@ const heroImage = {
 
 @media (max-width: 760px) {
   .hero {
-    min-height: 620px;
+    min-height: 560px;
   }
 
   .hero__media::after {
@@ -114,12 +114,24 @@ const heroImage = {
 
   .hero__content {
     align-content: end;
-    padding-top: 168px;
-    padding-bottom: 48px;
+    padding: 132px 24px 44px;
   }
 
   .hero h1 {
-    font-size: clamp(48px, 15vw, 70px);
+    max-width: none;
+    font-size: 44px;
+  }
+
+  .hero__button {
+    display: flex;
+    width: 100%;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 38px;
   }
 }
 </style>

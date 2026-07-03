@@ -14,15 +14,46 @@
       <a href="#">Доставка и возврат</a>
       <a href="#">Контакты</a>
     </nav>
+
+    <button class="site-header__menu-button" type="button" aria-label="Открыть меню" @click="isMenuOpen = true">
+      <Icon name="lucide:menu" aria-hidden="true" />
+    </button>
+
+    <Teleport to="body">
+      <div v-if="isMenuOpen" class="site-header__mobile-menu">
+        <div class="site-header__mobile-head">
+          <NuxtLink class="site-header__brand" to="/" aria-label="Nora Hale Atelier, главная" @click="isMenuOpen = false">
+            <span>Nora Hale</span>
+            <small>atelier</small>
+          </NuxtLink>
+          <button type="button" aria-label="Закрыть меню" @click="isMenuOpen = false">
+            <Icon name="lucide:x" aria-hidden="true" />
+          </button>
+        </div>
+
+        <nav class="site-header__mobile-nav" aria-label="Мобильная навигация">
+          <NuxtLink to="/catalog" @click="isMenuOpen = false">Коллекция</NuxtLink>
+          <NuxtLink to="/studio" @click="isMenuOpen = false">О студии</NuxtLink>
+          <a href="#" @click="isMenuOpen = false">Доставка и возврат</a>
+          <a href="#" @click="isMenuOpen = false">Контакты</a>
+        </nav>
+      </div>
+    </Teleport>
   </header>
 </template>
 
 <script setup lang="ts">
 const isScrolled = ref(false)
+const isMenuOpen = ref(false)
+const route = useRoute()
 
 const updateScrolledState = () => {
   isScrolled.value = window.scrollY > 8
 }
+
+watch(() => route.fullPath, () => {
+  isMenuOpen.value = false
+})
 
 onMounted(() => {
   updateScrolledState()
@@ -99,33 +130,89 @@ onBeforeUnmount(() => {
   text-transform: lowercase;
 }
 
+.site-header__menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.site-header__mobile-menu {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+.site-header__mobile-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header__mobile-head .site-header__brand {
+  justify-items: start;
+}
+
+.site-header__mobile-head .site-header__brand span {
+  font-size: 22px;
+}
+
+.site-header__mobile-head button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.site-header__mobile-nav {
+  display: grid;
+  gap: 8px;
+  margin-top: 52px;
+}
+
+.site-header__mobile-nav a {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  line-height: 1.05;
+}
+
 @media (max-width: 760px) {
   .site-header {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto 1fr;
     justify-items: center;
-    gap: 16px;
-    min-height: 112px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    min-height: 72px;
+    padding: 16px 22px;
   }
 
   .site-header__brand {
-    grid-row: 1;
+    grid-column: 2;
   }
 
   .site-header__nav {
-    width: 100%;
-    justify-content: center;
-    gap: 18px;
-    font-size: 10px;
-  }
-
-  .site-header__nav--left {
-    grid-row: 2;
-  }
-
-  .site-header__nav--right {
     display: none;
+  }
+
+  .site-header__menu-button {
+    display: inline-flex;
+    grid-column: 3;
+    justify-self: end;
   }
 }
 </style>

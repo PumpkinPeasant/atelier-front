@@ -27,14 +27,20 @@
   text-align: right;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 760px) {
   .intro {
     grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 36px 24px;
   }
 
   .intro__center,
   .intro__right {
     text-align: left;
+  }
+
+  .intro__center {
+    display: none;
   }
 }
 </style>

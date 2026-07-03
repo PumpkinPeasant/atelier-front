@@ -135,17 +135,24 @@ const products = [
   margin-top: 20px;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 760px) {
   .collection {
     grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 52px 24px 64px;
+  }
+
+  .collection h2 {
+    max-width: none;
   }
 
   .collection__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 18px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 400px) {
   .collection__grid {
     grid-template-columns: 1fr;
   }

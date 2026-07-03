@@ -91,15 +91,30 @@ const studioImages = [
   aspect-ratio: 1 / 1;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 760px) {
   .studio {
     grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 48px 24px;
+  }
+
+  .studio__content {
+    padding-top: 0;
+  }
+
+  .studio p:not(.studio__eyebrow) {
+    max-width: none;
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 760px) {
   .studio__gallery {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .studio__image {
+    aspect-ratio: 3 / 2;
   }
 }
 </style>

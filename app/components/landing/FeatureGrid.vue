@@ -92,21 +92,28 @@ const features = [
   text-transform: uppercase;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 760px) {
   .features {
     grid-template-columns: 1fr;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 
   .feature,
   .feature + .feature {
     min-height: 0;
-    padding: 36px 0;
+    padding: 30px 0;
     border-right: 0;
     border-bottom: var(--line-thin);
   }
 
   .feature:last-child {
     border-bottom: 0;
+  }
+
+  .feature h2,
+  .feature__copy {
+    max-width: none;
   }
 }
 </style>

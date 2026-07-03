@@ -38,15 +38,20 @@
   justify-content: flex-end;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .site-footer {
     grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 24px;
+    padding: 34px 24px;
+    text-align: center;
   }
 
   .site-footer nav,
   .site-footer nav:last-child {
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 10px 28px;
   }
 }
 </style>
