@@ -440,7 +440,7 @@ useSeoMeta(createSeoMeta({
   text-transform: uppercase;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 760px) {
   .studio-intro__text,
   .studio-split,
   .studio-range__grid {
@@ -466,27 +466,37 @@ useSeoMeta(createSeoMeta({
   .studio-range article:last-child {
     border-bottom: 0;
   }
-}
-
-@media (max-width: 760px) {
   .studio-page {
     padding-top: 112px;
   }
 
   .studio-hero {
-    padding-top: 56px;
+    padding: 56px var(--container-inline) 48px;
+  }
+
+  .studio-hero h1 {
+    font-size: 44px;
   }
 
   .studio-process__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+    gap: 12px;
+  }
+
+  .studio-stats {
+    gap: 34px 20px;
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
 }
 
-@media (max-width: 520px) {
-  .studio-process__grid,
+@media (max-width: 400px) {
+  .studio-hero h1 {
+    font-size: 37px;
+  }
+
   .studio-stats {
     grid-template-columns: 1fr;
+    gap: 26px;
   }
 }
 </style>

@@ -78,7 +78,10 @@ useSeoMeta(createSeoMeta({
 
 <style scoped>
 .catalog-page {
+  width: 100%;
+  max-width: var(--container-max);
   min-height: 100vh;
+  margin-inline: auto;
   padding: 128px var(--container-inline) 72px;
 }
 

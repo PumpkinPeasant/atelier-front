@@ -71,7 +71,7 @@ const features = [
 }
 
 .feature h2 {
-  max-width: 250px;
+  max-width: 318px;
   color: #22211c;
   font-size: clamp(28px, 2.25vw, 30px);
   line-height: 1.1;

@@ -1,23 +1,25 @@
 <template>
   <header class="site-header" :class="{ 'site-header--scrolled': isScrolled }">
-    <nav class="site-header__nav site-header__nav--left" aria-label="Основная навигация">
-      <NuxtLink to="/catalog">Коллекция</NuxtLink>
-      <NuxtLink to="/studio">О студии</NuxtLink>
-    </nav>
+    <div class="site-header__inner">
+      <nav class="site-header__nav site-header__nav--left" aria-label="Основная навигация">
+        <NuxtLink to="/catalog">Коллекция</NuxtLink>
+        <NuxtLink to="/studio">О студии</NuxtLink>
+      </nav>
 
-    <NuxtLink class="site-header__brand" to="/" aria-label="Nora Hale Atelier, главная">
-      <span>Nora Hale</span>
-      <small>atelier</small>
-    </NuxtLink>
+      <NuxtLink class="site-header__brand" to="/" aria-label="Nora Hale Atelier, главная">
+        <span>Nora Hale</span>
+        <small>atelier</small>
+      </NuxtLink>
 
-    <nav class="site-header__nav site-header__nav--right" aria-label="Навигация аккаунта">
-      <a href="#">Доставка и возврат</a>
-      <a href="#">Контакты</a>
-    </nav>
+      <nav class="site-header__nav site-header__nav--right" aria-label="Навигация аккаунта">
+        <a href="#">Доставка и возврат</a>
+        <a href="#">Контакты</a>
+      </nav>
 
-    <button class="site-header__menu-button" type="button" aria-label="Открыть меню" @click="isMenuOpen = true">
-      <Icon name="lucide:menu" aria-hidden="true" />
-    </button>
+      <button class="site-header__menu-button" type="button" aria-label="Открыть меню" @click="isMenuOpen = true">
+        <Icon name="lucide:menu" aria-hidden="true" />
+      </button>
+    </div>
 
     <Teleport to="body">
       <div v-if="isMenuOpen" class="site-header__mobile-menu">
@@ -70,19 +72,12 @@ onBeforeUnmount(() => {
   position: fixed;
   z-index: 100;
   top: 0;
-  left: 50%;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  left: 0;
   width: 100%;
-  max-width: var(--container-max);
-  min-height: 86px;
-  padding: 18px var(--container-inline);
   color: var(--color-text);
   background: rgba(245, 242, 237, 0);
   backdrop-filter: blur(0);
   border-bottom: 1px solid rgba(213, 203, 196, 0);
-  transform: translateX(-50%);
   transition:
     background 220ms ease,
     backdrop-filter 220ms ease,
@@ -93,6 +88,17 @@ onBeforeUnmount(() => {
   background: rgba(245, 242, 237, 0.72);
   backdrop-filter: blur(18px);
   border-bottom-color: rgba(213, 203, 196, 0.45);
+}
+
+.site-header__inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  max-width: var(--container-max);
+  min-height: 86px;
+  margin-inline: auto;
+  padding: 18px var(--container-inline);
 }
 
 .site-header__nav {
@@ -201,7 +207,7 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 760px) {
-  .site-header {
+  .site-header__inner {
     grid-template-columns: 1fr auto 1fr;
     justify-items: center;
     min-height: 72px;
