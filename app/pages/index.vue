@@ -9,5 +9,12 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta(createSeoMeta())
+const landingTitle = 'NORA HALE · Базовые вещи ручной работы'
+
+useSeoMeta({
+  ...createSeoMeta(),
+  title: landingTitle,
+  ogTitle: landingTitle,
+  twitterTitle: landingTitle
+})
 </script>
